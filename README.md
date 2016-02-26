@@ -1,4 +1,5 @@
-"# livechat-wordpress" 
+"# livechat-wordpress"
+
 === Plugin Name ===
 Contributors: liveitpros
 Donate link: http://www.liveitpros.com
@@ -9,7 +10,9 @@ Stable tag: 4.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+
 Plugin supports integration of http://www.Rocket.Chat livechat feature with WordPress
+
 
 == Description ==
 
