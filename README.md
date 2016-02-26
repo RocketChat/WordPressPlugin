@@ -1,37 +1,29 @@
-"# livechat-wordpress"
+LIVEChat Wordpress Integration
+=======================
 
-=== Plugin Name ===
-Contributors: liveitpros
-Donate link: http://www.liveitpros.com
-Tags: livechat, rocket.chat, live chat, helpdesk
-Requires at least: 3.0.1
-Tested up to: 4.4.2
-Stable tag: 4.4.2
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+This library is maintained by LIVE I.T Pros.
 
+Overview
+=======================
 
-Plugin supports integration of http://www.Rocket.Chat livechat feature with WordPress
+Rocket.Chat LIVEChat Wordpress integration. This module can be used on a Wordpress based website for basic functionality Rocket.Chat LIVEChat to appear in WordPress.
+User only needs to log in to the website and he will be able to generate code for ingegration of Rocket.Chat LIVEChat.
 
+Features
+=======================
 
-== Description ==
+* Rocket.Chat LIVEChat front-end users.
+* LIVEChat Tag Generator for Wordpress Templates.
 
-Initial release of the livechat-wordpress plugin
+Supported versions
+=======================
 
-== Installation ==
+RocketChat: v? and above
 
-1. Upload `livechat-wordpress.zip` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Configure in plugin
+Installation Steps
+=======================
 
-== Frequently Asked Questions ==
-Where do I get the LIVEChat service? 
-A) http://www.Rocket.Chat
-
-Answer to foo bar dilemma.
-
-== Changelog ==
-
-= 0.1 =
-* Initial release
-
+1. Download and extract LIVEChat-WordPress.
+3. Open the Wordpress Admin Panel. Click on the Plugins -> Installed Plugins. You will find the LIVEChat-Wordpress plugin. Please activate the plugin.
+4. Click on LIVEChat-WordPress Settings from submenu. Fill the Rocket.Chat LIVEChat details accordingly. 
+5. Put the LIVEChat Tag generator code in LiveChat tag settings.
