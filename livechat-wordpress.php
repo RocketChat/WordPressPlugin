@@ -20,7 +20,7 @@ session_start();
  *
  */
 
-final class RocketChat-LIVEChat
+final class RocketChat_LIVEChat
 {
 
 	private $settings = array();
@@ -461,7 +461,7 @@ final class RocketChat-LIVEChat
 
 // Register the Rocket.Chat LIVEChat class initialization during WordPress' init action. Globally available through $rocketchat-livechat.
 
-add_action('init', create_function('', 'global $rocketchat-livechat; $rocketchat-livechat = new RocketChat-LIVEChat();'));
+add_action('init', create_function('', 'global $rocketchat-livechat; $rocketchat-livechat = new RocketChat_LIVEChat();'));
 
 /*
  * LiveChat Tag template tag
