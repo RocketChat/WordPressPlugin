@@ -1,8 +1,4 @@
 
-Editing:  
-/home/livewp/public_html/wp-content/plugins/livechat-wordpress/livechat-wordpress.php
- Encoding:    Re-open Use Code Editor     Close  Save Changes
-
 <?php
 
 /*
