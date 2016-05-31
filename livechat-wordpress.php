@@ -269,7 +269,7 @@ final class RocketChat_LIVEChat
 
 	 */
 
-	public function rocketchat_admin_init()
+	public function rocketchat_livechat_admin_init()
 
 	{
 
