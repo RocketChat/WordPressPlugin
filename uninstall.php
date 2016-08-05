@@ -19,13 +19,16 @@
  * For more information, see the following discussion:
  * https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate/pull/123#issuecomment-28541913
  *
- * @link       http://www.liveitpros.com
+ * @link       http://nezn.am
  * @since      1.0.0
  *
- * @package    Livechat_Wordpress
+ * @package    Rocketchat_Livechat
  */
 
 // If uninstall not called from WordPress, then exit.
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
+
+
+//TODO delete options

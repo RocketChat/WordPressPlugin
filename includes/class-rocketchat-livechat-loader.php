@@ -3,11 +3,11 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       http://www.liveitpros.com
+ * @link       http://nezn.am
  * @since      1.0.0
  *
- * @package    Livechat_Wordpress
- * @subpackage Livechat_Wordpress/includes
+ * @package    Rocketchat_Livechat
+ * @subpackage Rocketchat_Livechat/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Livechat_Wordpress
- * @subpackage Livechat_Wordpress/includes
- * @author     Sean Alexander Sr <livechat-wordpress.email@liveitpros.com>
+ * @package    Rocketchat_Livechat
+ * @subpackage Rocketchat_Livechat/includes
+ * @author     Marko Banušić <mbanusic@gmail.com>
  */
-class Livechat_Wordpress_Loader {
+class Rocketchat_Livechat_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

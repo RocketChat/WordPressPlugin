@@ -6,11 +6,11 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       http://www.liveitpros.com
+ * @link       http://nezn.am
  * @since      1.0.0
  *
- * @package    Livechat_Wordpress
- * @subpackage Livechat_Wordpress/includes
+ * @package    Rocketchat_Livechat
+ * @subpackage Rocketchat_Livechat/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Livechat_Wordpress
- * @subpackage Livechat_Wordpress/includes
- * @author     Sean Alexander Sr <livechat-wordpress.email@liveitpros.com>
+ * @package    Rocketchat_Livechat
+ * @subpackage Rocketchat_Livechat/includes
+ * @author     Marko Banušić <mbanusic@gmail.com>
  */
-class Livechat_Wordpress {
+class Rocketchat_Livechat {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Livechat_Wordpress {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Livechat_Wordpress_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Rocketchat_Livechat_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -68,7 +68,7 @@ class Livechat_Wordpress {
 	 */
 	public function __construct() {
 
-		$this->plugin_name = 'livechat-wordpress';
+		$this->plugin_name = 'rocketchat-livechat';
 		$this->version = '1.0.0';
 
 		$this->load_dependencies();
@@ -83,10 +83,10 @@ class Livechat_Wordpress {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Livechat_Wordpress_Loader. Orchestrates the hooks of the plugin.
-	 * - Livechat_Wordpress_i18n. Defines internationalization functionality.
-	 * - Livechat_Wordpress_Admin. Defines all hooks for the admin area.
-	 * - Livechat_Wordpress_Public. Defines all hooks for the public side of the site.
+	 * - Rocketchat_Livechat_Loader. Orchestrates the hooks of the plugin.
+	 * - Rocketchat_Livechat_i18n. Defines internationalization functionality.
+	 * - Rocketchat_Livechat_Admin. Defines all hooks for the admin area.
+	 * - Rocketchat_Livechat_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -100,33 +100,33 @@ class Livechat_Wordpress {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-livechat-wordpress-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-rocketchat-livechat-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-livechat-wordpress-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-rocketchat-livechat-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-livechat-wordpress-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-rocketchat-livechat-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-livechat-wordpress-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-rocketchat-livechat-public.php';
 
-		$this->loader = new Livechat_Wordpress_Loader();
+		$this->loader = new Rocketchat_Livechat_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Livechat_Wordpress_i18n class in order to set the domain and to register the hook
+	 * Uses the Rocketchat_Livechat_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -134,7 +134,7 @@ class Livechat_Wordpress {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Livechat_Wordpress_i18n();
+		$plugin_i18n = new Rocketchat_Livechat_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -149,10 +149,10 @@ class Livechat_Wordpress {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Livechat_Wordpress_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Rocketchat_Livechat_Admin( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'menu' );
+		$this->loader->add_action( 'admin_init', $plugin_admin, 'register_settings' );
 
 	}
 
@@ -165,10 +165,9 @@ class Livechat_Wordpress {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Livechat_Wordpress_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Rocketchat_Livechat_Public( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		$this->loader->add_action( 'wp_footer', $plugin_public, 'livechat_tag' );
 
 	}
 
@@ -196,7 +195,7 @@ class Livechat_Wordpress {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Livechat_Wordpress_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Rocketchat_Livechat_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

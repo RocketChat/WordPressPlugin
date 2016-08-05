@@ -3,11 +3,11 @@
 /**
  * Fired during plugin deactivation
  *
- * @link       http://www.liveitpros.com
+ * @link       http://nezn.am
  * @since      1.0.0
  *
- * @package    Livechat_Wordpress
- * @subpackage Livechat_Wordpress/includes
+ * @package    Rocketchat_Livechat
+ * @subpackage Rocketchat_Livechat/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    Livechat_Wordpress
- * @subpackage Livechat_Wordpress/includes
- * @author     Sean Alexander Sr <livechat-wordpress.email@liveitpros.com>
+ * @package    Rocketchat_Livechat
+ * @subpackage Rocketchat_Livechat/includes
+ * @author     Marko Banušić <mbanusic@gmail.com>
  */
-class Livechat_Wordpress_Deactivator {
+class Rocketchat_Livechat_Deactivator {
 
 	/**
 	 * Short Description. (use period)
@@ -30,7 +30,7 @@ class Livechat_Wordpress_Deactivator {
 	 * @since    1.0.0
 	 */
 	public static function deactivate() {
-
+		//TODO: flush cache
 	}
 
 }

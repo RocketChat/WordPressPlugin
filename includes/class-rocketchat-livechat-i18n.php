@@ -6,11 +6,11 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       http://www.liveitpros.com
+ * @link       http://nezn.am
  * @since      1.0.0
  *
- * @package    Livechat_Wordpress
- * @subpackage Livechat_Wordpress/includes
+ * @package    Rocketchat_Livechat
+ * @subpackage Rocketchat_Livechat/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Livechat_Wordpress
- * @subpackage Livechat_Wordpress/includes
- * @author     Sean Alexander Sr <livechat-wordpress.email@liveitpros.com>
+ * @package    Rocketchat_Livechat
+ * @subpackage Rocketchat_Livechat/includes
+ * @author     Marko Banušić <mbanusic@gmail.com>
  */
-class Livechat_Wordpress_i18n {
+class Rocketchat_Livechat_i18n {
 
 
 	/**
@@ -35,7 +35,7 @@ class Livechat_Wordpress_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'livechat-wordpress',
+			'rocketchat-livechat',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
