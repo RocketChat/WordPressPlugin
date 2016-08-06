@@ -12,13 +12,16 @@ Plugin to provide Rocket.Chat LiveChat functionality to WordPress
 
 == Description ==
 
-Plugin to provide Rocket.Chat LiveChat functionality to WordPress
+Rocket.Chat is an exciting new application that enables you to setup your very own chat service.
+Please visit http://rocket.chat for installation details.
 
 
 == Installation ==
 
 1. Upload `rocketchat-livechat-wp` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Go to Settings-> Rocket.Chat LiveChat and enter the URL of your Rocket.Chat installation and save.
+4. If you do not have a Rocket.Chat please visit http://rocket.chat and setup your Rocket.Chat
 
 
 == Frequently Asked Questions ==
