@@ -3,7 +3,7 @@
 /**
  * Fired during plugin activation
  *
- * @link       http://nezn.am
+ * @link       http://rocket.chat
  * @since      1.0.0
  *
  * @package    Rocketchat_Livechat
@@ -22,15 +22,8 @@
  */
 class Rocketchat_Livechat_Activator {
 
-	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
-	 *
-	 * @since    1.0.0
-	 */
 	public static function activate() {
-		//TODO: add options
+		add_option( 'rocketchat-livechat-url' );
 	}
 
 }

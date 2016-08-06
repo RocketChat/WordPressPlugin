@@ -1,12 +1,12 @@
 === Plugin Name ===
-Contributors: mbanusic
+Contributors: rocketchat, mbanusic
 Donate link: http://rocket.chat
 Tags: rocket.chat, chat, livechat
 Requires at least: 3.0.1
 Tested up to: 4.6
-Stable tag: 4.5
-License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Stable tag: 1.0.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Plugin to provide Rocket.Chat LiveChat functionality to WordPress
 
@@ -33,6 +33,6 @@ No.
 
 == Changelog ==
 
-= 0.1 =
+= 1.0.0 =
 * Initial setup
 

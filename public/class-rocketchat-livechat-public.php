@@ -3,7 +3,7 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       http://nezn.am
+ * @link       http://rocket.chat
  * @since      1.0.0
  *
  * @package    Rocketchat_Livechat
@@ -54,6 +54,11 @@ class Rocketchat_Livechat_Public {
 
 	}
 
+	/**
+	 * Display the LiveChat tag
+	 *
+	 * @since    1.0.0
+	 */
 	public function livechat_tag() {
 		$livechat_url = get_option('rocketchat-livechat-url');
 		if ( $livechat_url ) {

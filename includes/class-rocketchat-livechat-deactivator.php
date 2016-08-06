@@ -3,7 +3,7 @@
 /**
  * Fired during plugin deactivation
  *
- * @link       http://nezn.am
+ * @link       http://rocket.chat
  * @since      1.0.0
  *
  * @package    Rocketchat_Livechat
@@ -22,15 +22,8 @@
  */
 class Rocketchat_Livechat_Deactivator {
 
-	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
-	 *
-	 * @since    1.0.0
-	 */
 	public static function deactivate() {
-		//TODO: flush cache
+		//currently do nothing
 	}
 
 }

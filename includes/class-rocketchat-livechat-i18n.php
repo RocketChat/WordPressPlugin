@@ -6,7 +6,7 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       http://nezn.am
+ * @link       http://rocket.chat
  * @since      1.0.0
  *
  * @package    Rocketchat_Livechat

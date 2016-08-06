@@ -3,7 +3,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       http://nezn.am
+ * @link       http://rocket.chat
  * @since      1.0.0
  *
  * @package    Rocketchat_Livechat
