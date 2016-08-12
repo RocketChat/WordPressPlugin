@@ -44,7 +44,7 @@ There is no comparison, only Rocket.Chat Live Chat plugin offers:
 * transfer to voice and/or video chat
 * amazing extension possibilities through the use of intelligent "bots"
 
-Don't wait, try Rocket.Chat Live Chat plugin today; and get rid of the old stale plugin that costs your dearly every single month.
+Don't wait, try Rocket.Chat Live Chat plugin today; boost your bottomline and get rid of the old stale plugin that costs you dearly every single month.
 
 == Installation ==
 
