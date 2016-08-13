@@ -20,7 +20,7 @@ Build trust and relationship with your customers through immediate feedback and 
 
 Rocket.Chat Live Chat plugin allows website visitors to chat with you directly.   You can handle multiple incoming chats yourself, or assign them to your sales agents (even work-at-home agents).  
 
-Unlike other Wordpress chat plugins, Rocket.Chat Live Chat plugin works with the world's most popular 100% open source chat server - Rocket.Chat.  This means you can run and operate your own chat server and never have to pay any monthly fees to have Live Chat on your website.  It also means that you are supported by a community of over 40,000 Rocket.Chat users over 22 countries.
+Unlike other Wordpress chat plugins, Rocket.Chat Live Chat plugin works with the world's most popular 100% open source chat server - Rocket.Chat.  This means you can run and operate your own chat server and never have to pay any monthly fees to have Live Chat on your website.  It also means that you are supported by a community of over 40,000 Rocket.Chat servers with hundreds of thousands of users worldwide in over 22 countries.
 
 Rocket.Chat Live Chat plugin also have the following class-leading features:
 
