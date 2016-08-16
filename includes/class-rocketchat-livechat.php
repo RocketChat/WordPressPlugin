@@ -119,6 +119,8 @@ class Rocketchat_Livechat {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-rocketchat-livechat-public.php';
 
+		require_once plugin_dir_path(  dirname( __FILE__ ) ) . 'includes/class-rocketchat-livechat-api.php';
+
 		$this->loader = new Rocketchat_Livechat_Loader();
 
 	}

@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:       Rocket.Chat LiveChat
  * Plugin URI:        http://rocket.chat
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Plugin to provide Rocket.Chat Live Chat functionality to WordPress
  * Version:           1.0.0
  * Author:            Marko Banušić
  * Author URI:        http://nezn.am
