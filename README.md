@@ -41,5 +41,5 @@ docker-compose up
 7. Create new Pull Request
 
 # License
-Note that Rocket.Chat Plugin is distributed under the MIT License.
+Note that Rocket.Chat Plugin is distributed under the [MIT License](https://github.com/oguhpereira/WordPressPlugin/blob/develop/LICENSE).
 
