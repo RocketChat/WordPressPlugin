@@ -44,6 +44,13 @@ function deactivate_rocketchat_livechat() {
 register_activation_hook( __FILE__, 'activate_rocketchat_livechat' );
 register_deactivation_hook( __FILE__, 'deactivate_rocketchat_livechat' );
 
+function add_settings_link( $links ) {
+	$settings_link = '<a href="options-general.php?page=rocketchat-livechat">' . __( 'Settings', 'plugin_textdomain' ) . '</a>';
+	array_push( $links, $settings_link );
+	return $links;
+}
+
+add_filter(  'plugin_action_links_' . plugin_basename(__FILE__), 'add_settings_link'  );
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
