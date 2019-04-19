@@ -64,16 +64,16 @@ class Rocketchat_Livechat_Public {
 		if ( $livechat_url ) {
 			$livechat_url = trailingslashit( $livechat_url );
 			?>
-            <!-- Start of Rocket.Chat Livechat Script -->
-            <script type="text/javascript">
-                (function(w, d, s, u) {
-                    w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
-                    var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
-                    j.async = true; j.src = '<?php echo esc_url( $livechat_url ) ?>packages/rocketchat_livechat/assets/rocketchat-livechat.min.js?_=201702160944';
-                    h.parentNode.insertBefore(j, h);
-                })(window, document, 'script', '<?php echo esc_url( $livechat_url ) ?>livechat');
-            </script>
-            <!-- End of Rocket.Chat Livechat Script -->
+		<!-- Start of Rocket.Chat Livechat Script -->
+		<script type="text/javascript">
+		(function(w, d, s, u) {
+			w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
+			var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+			j.async = true; j.src = '<?php echo esc_url( $livechat_url ) ?>livechat/1.0.0/rocketchat-livechat.min.js?_=201903270000';
+			h.parentNode.insertBefore(j, h);
+		})(window, document, 'script', '<?php echo esc_url( $livechat_url ) ?>livechat?version=1.0.0');
+		</script>
+		<!-- End of Rocket.Chat Livechat Script -->
 			<?php
 		}
 	}
