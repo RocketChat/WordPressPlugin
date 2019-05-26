@@ -1,10 +1,10 @@
 === Plugin Name ===
-Contributors: rocketchat, mbanusic
+Contributors: rocketchat, mbanusic, junglewp
 Donate link: http://rocket.chat
 Tags: rocket.chat, chat, livechat, support, sales
 Requires at least: 3.0.1
-Tested up to: 4.9
-Stable tag: 1.0.1
+Tested up to: 5.2.1
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
