@@ -2,7 +2,7 @@
 /**
  *
  * @link              http://rocket.chat
- * @since             1.0.0
+ * @since             1.0.1
  * @package           Rocketchat_Livechat
  *
  * @wordpress-plugin
@@ -31,6 +31,36 @@ function activate_rocketchat_livechat() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-rocketchat-livechat-activator.php';
 	Rocketchat_Livechat_Activator::activate();
 }
+
+/**
+ * We check if the user have added his rocket.chat instance URL
+ */
+
+register_activation_hook( __FILE__, 'Rocketchat_Livechat_admin_notice_Rocketchat_Livechat_activation_hook' );
+
+function Rocketchat_Livechat_admin_notice_Rocketchat_Livechat_activation_hook() {
+    set_transient( 'Rocketchat-Livechat-admin-notice-wptimelapse', true, 5 );
+}
+
+add_action( 'admin_notices', 'Rocketchat_Livechat_admin_notice_Rocketchat_Livechat_notice' );
+
+function Rocketchat_Livechat_admin_notice_Rocketchat_Livechat_notice(){
+
+	  /* Delete transient, only if the license key is present. */
+			delete_transient( 'rocketchat-admin-notice-livechat' );
+
+    /* Check transient or license, if available display notice */
+    if( get_transient( 'rocketchat-admin-notice-livechat' ) || empty(get_option('rocketchat-livechat-url')) ){
+        ?>
+        <div class="notice notice-info is-dismissible">
+            <p>Thank you for using Rocket.Chat Livechat! <strong><a href="<?php echo get_admin_url() ;?>options-general.php?page=rocketchat-livechat">Please activate your Rocket.Chat URL</a></strong>.</p>
+			
+        </div>
+        <?php
+    }
+}
+
+ // End of the URL check
 
 /**
  * The code that runs during plugin deactivation.
