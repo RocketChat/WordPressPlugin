@@ -2,14 +2,14 @@
 /**
  *
  * @link              http://rocket.chat
- * @since             1.0.1
+ * @since             1.0.0
  * @package           Rocketchat_Livechat
  *
  * @wordpress-plugin
  * Plugin Name:       Rocket.Chat LiveChat
  * Plugin URI:        http://rocket.chat
  * Description:       Plugin to provide Rocket.Chat Live Chat functionality to WordPress
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Marko Banušić
  * Author URI:        http://nezn.am
  * License:           GPL-2.0+
@@ -46,7 +46,7 @@ add_action( 'admin_notices', 'Rocketchat_Livechat_admin_notice_Rocketchat_Livech
 
 function Rocketchat_Livechat_admin_notice_Rocketchat_Livechat_notice(){
 
-	  /* Delete transient, only if the license key is present. */
+	  /* Delete transient, only if the Rocket.chat URL is present. */
 			delete_transient( 'rocketchat-admin-notice-livechat' );
 
     /* Check transient or license, if available display notice */
