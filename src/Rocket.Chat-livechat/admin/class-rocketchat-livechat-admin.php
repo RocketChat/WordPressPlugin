@@ -58,30 +58,11 @@ class Rocketchat_Livechat_Admin {
 
 	public function register_settings() {
 		register_setting(
-			'rocketchat-livechat-options', 'rocketchat-livechat-username', array(
-			$this,
-			'sanitize_text'
-		)
-		);
-		register_setting(
-			'rocketchat-livechat-options', 'rocketchat-livechat-user-id', array(
-			$this,
-			'sanitize_text'
-		)
-		);
-		register_setting(
-			'rocketchat-livechat-options', 'rocketchat-livechat-auth-token', array(
-			$this,
-			'sanitize_text'
-		)
-		);
-		register_setting(
 			'rocketchat-livechat-options', 'rocketchat-livechat-url', array(
 			$this,
 			'sanitize_url'
 		)
 		);
-
 		add_settings_section( 'rocketchat-livechat-options-head', 'LiveChat API settings', '', 'rocketchat-livechat-options' );
 		add_settings_field(
 			'rocketchat-livechat-url', __( 'URL of LiveChat', 'rocketchat-livechat' ), array(
@@ -93,27 +74,6 @@ class Rocketchat_Livechat_Admin {
 			'size' => 100
 		)
 		);
-		add_settings_field(
-			'rocketchat-livechat-username', __( 'Username', 'rocketchat-livechat' ), array(
-			$this,
-			'settings_text'
-		), 'rocketchat-livechat-options', 'rocketchat-livechat-options-head', array(
-			'id'   => 'rocketchat-livechat-username',
-			'desc' => __( 'Enter your username', 'rocketchat-livechat' )
-		)
-		);
-		add_settings_field(
-			'rocketchat-livechat-password', __( 'Password', 'rocketchat-livechat' ), array(
-			$this,
-			'settings_text'
-		), 'rocketchat-livechat-options', 'rocketchat-livechat-options-head', array(
-				'id'   => 'rocketchat-livechat-password',
-				'desc' => __( 'Enter your password', 'rocketchat-livechat' ),
-				'type' => 'password'
-			)
-		);
-
-
 	}
 
 	public function menu() {
@@ -121,7 +81,6 @@ class Rocketchat_Livechat_Admin {
 			$this,
 			'options'
 		) , plugins_url('../public/icon.svg', __FILE__) );
-		add_action( 'admin_init', 'register_my_cool_plugin_settings' );
 
 	}
 
@@ -154,12 +113,6 @@ class Rocketchat_Livechat_Admin {
 				if ( isset( $_POST['rocketchat-livechat-username'] ) && $_POST['rocketchat-livechat-username'] ) {
 					update_option( 'rocketchat-livechat-username', sanitize_text_field( $_POST['rocketchat-livechat-username'] ) );
 				}
-				if ( isset( $_POST['rocketchat-livechat-password'] ) && $_POST['rocketchat-livechat-password'] ) {
-					//user entered password, so we can make an auth request
-					$c = new Rocketchat_Livechat_REST_API();
-					$r = $c->login( $_POST['rocketchat-livechat-username'], $_POST['rocketchat-livechat-password'], $_POST['rocketchat-livechat-url'] );
-					//TODO:notice of success/failure
-				}
 			}
 			?>
 			<form method="POST"><?php
@@ -168,12 +121,6 @@ class Rocketchat_Livechat_Admin {
 				submit_button();
 				?>
 			</form>
-
-				<div>
-					<p>User ID: <?php echo esc_html( get_option( 'rocketchat-livechat-user-id' ) ) ?></p>
-					<p>Auth Token: <?php echo esc_html( get_option( 'rocketchat-livechat-auth-token' ) ) ?></p>
-					<?php //TODO: button to clear data ?>
-				</div>
 			</div>
 		<?php
 	}
@@ -218,23 +165,4 @@ class Rocketchat_Livechat_Admin {
 				class="description"><?php echo esc_html( $args['desc'] ); ?></p><?php
 		}
 	}
-}
-
-add_action('admin_menu', 'my_cool_plugin_create_menu');
-
-function my_cool_plugin_create_menu() {
-
-	//create new top-level menu
-	//add_menu_page('Rocket.Chat LiveChat', 'Rocket.Chat', 'administrator', __FILE__, 'my_cool_plugin_settings_page' , plugins_url('../public/icon.svg', __FILE__) );
-
-	//call register settings function
-	add_action( 'admin_init', 'register_my_cool_plugin_settings' );
-}
-
-
-function register_my_cool_plugin_settings() {
-	//register our settings
-	register_setting( 'my-cool-plugin-settings-group', 'new_option_name' );
-	register_setting( 'my-cool-plugin-settings-group', 'some_other_option' );
-	register_setting( 'my-cool-plugin-settings-group', 'option_etc' );
 }

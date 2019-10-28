@@ -69,7 +69,7 @@ class Rocketchat_Livechat {
 	public function __construct() {
 
 		$this->plugin_name = 'rocketchat-livechat';
-		$this->version = '1.0.0';
+		$this->version = '1.0.2';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -118,8 +118,6 @@ class Rocketchat_Livechat {
 		 * side of the site.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-rocketchat-livechat-public.php';
-
-		require_once plugin_dir_path(  dirname( __FILE__ ) ) . 'includes/class-rocketchat-livechat-api.php';
 
 		$this->loader = new Rocketchat_Livechat_Loader();
 

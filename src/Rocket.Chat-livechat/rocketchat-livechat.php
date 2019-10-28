@@ -2,14 +2,14 @@
 /**
  *
  * @link              http://rocket.chat
- * @since             1.0.0
+ * @since             1.0.2
  * @package           Rocketchat_Livechat
  *
  * @wordpress-plugin
  * Plugin Name:       Rocket.Chat LiveChat
  * Plugin URI:        http://rocket.chat
- * Description:       Plugin to provide Rocket.Chat Live Chat functionality to WordPress
- * Version:           1.0.0
+ * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Version:           1.0.2
  * Author:            Marko Banušić
  * Author URI:        http://nezn.am
  * License:           GPL-2.0+
@@ -44,13 +44,6 @@ function deactivate_rocketchat_livechat() {
 register_activation_hook( __FILE__, 'activate_rocketchat_livechat' );
 register_deactivation_hook( __FILE__, 'deactivate_rocketchat_livechat' );
 
-function add_settings_link( $links ) {
-	$settings_link = '<a href="options-general.php?page=rocketchat-livechat">' . __( 'Settings', 'plugin_textdomain' ) . '</a>';
-	array_push( $links, $settings_link );
-	return $links;
-}
-
-add_filter(  'plugin_action_links_' . plugin_basename(__FILE__), 'add_settings_link'  );
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
