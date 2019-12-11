@@ -69,9 +69,9 @@ class Rocketchat_Livechat_Public {
                 (function(w, d, s, u) {
                     w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
                     var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
-                    j.async = true; j.src = '<?php echo esc_url( trailingslashit( $livechat_url ) ) ?>livechat/rocketchat-livechat.min.js?_=201903270000';
+                    j.async = true; j.src = '<?php echo esc_url( trailingslashit( $livechat_url ) ) ?>livechat/rocketchat-livechat.min.js?_=201912110000';
                     h.parentNode.insertBefore(j, h);
-                })(window, document, 'script', '<?php echo esc_url( trailingslashit( $livechat_url ) ) ?>livechat?version=1.0.0');
+                })(window, document, 'script', '<?php echo esc_url( trailingslashit( $livechat_url ) ) ?>livechat');
             </script>
             <!-- End of Rocket.Chat Livechat Script -->
 			<?php
