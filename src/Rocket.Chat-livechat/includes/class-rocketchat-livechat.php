@@ -69,7 +69,7 @@ class Rocketchat_Livechat {
 	public function __construct() {
 
 		$this->plugin_name = 'rocketchat-livechat';
-		$this->version = '1.0.2';
+		$this->version = '1.0.3';
 
 		$this->load_dependencies();
 		$this->set_locale();
