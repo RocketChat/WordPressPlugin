@@ -4,7 +4,7 @@ Donate link: http://rocket.chat
 Tags: rocket.chat, chat, livechat, support, sales
 Requires at least: 3.0.1
 Tested up to: 5.3
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -73,6 +73,9 @@ No, this plugin is only for support messaging, i.e. customer contacts sales with
 3. Offline form for sending messages
 
 == Changelog ==
+
+= 1.0.3 =
+* Remove '1.0.0' string from Livechat public path URL
 
 = 1.0.2 =
 * Update LiveChat script
