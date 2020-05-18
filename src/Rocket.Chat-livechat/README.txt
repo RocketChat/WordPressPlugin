@@ -1,12 +1,12 @@
 === Plugin Name ===
 Contributors: rocketchat, mbanusic, junglewp
-Donate link: http://rocket.chat
+Donate link: https://rocket.chat
 Tags: rocket.chat, chat, livechat, support, sales
 Requires at least: 3.0.1
-Tested up to: 5.3
-Stable tag: 1.0.3
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tested up to: 5.4
+Stable tag: 1.0.4
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Plugin to provide Rocket.Chat Live Chat functionality to WordPress
 
@@ -46,7 +46,7 @@ Don't wait, try Rocket.Chat Live Chat plugin today; boost your bottomline and ge
 
 == Installation ==
 
-1. Upload `rocketchat-livechat-wp` to the `/wp-content/plugins/` directory or install through WordPress plugins interface
+1. Upload `rocketchat-livechat` to the `/wp-content/plugins/` directory or install through WordPress plugins interface
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Go to Settings-> Rocket.Chat LiveChat and enter the URL of your Rocket.Chat installation and save.
 4. If you do not have a Rocket.Chat installation please visit https://rocket.chat and setup your Rocket.Chat
