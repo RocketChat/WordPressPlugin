@@ -77,6 +77,7 @@ No, this plugin is only for support messaging, i.e. customer contacts sales with
 
 = 1.0.3 =
 * Added setup notice on plugin activation
+* Remove '1.0.0' string from Livechat public path URL
 
 = 1.0.2 =
 * Update LiveChat script
