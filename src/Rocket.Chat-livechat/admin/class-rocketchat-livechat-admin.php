@@ -165,4 +165,21 @@ class Rocketchat_Livechat_Admin {
 				class="description"><?php echo esc_html( $args['desc'] ); ?></p><?php
 		}
 	}
+
+	public function rocketchat_livechat_admin_notice_url_setup(){
+
+		/* Delete transient, only if the Rocket.chat URL is present. */
+			  delete_transient( 'rocketchat-admin-notice-livechat-url' );
+  
+	    /* Check transient, if available display notice */
+			if( get_transient( 'rocketchat-admin-notice-livechat-url' )  || empty(get_option('rocketchat-livechat-url')) ){
+				 ?>
+				<div class="notice notice-info is-dismissible">
+				<p>Thank you for using Rocket.Chat Livechat! <strong><a href="<?php echo get_admin_url() ;?>options-general.php?page=Rocket.Chat-livechat/admin/class-rocketchat-livechat-admin.php">Please activate your Rocket.Chat URL</a></strong>.</p>
+  
+				</div>
+				<?php
+		 }
+	 }
+
 }

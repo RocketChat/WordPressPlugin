@@ -24,6 +24,11 @@ class Rocketchat_Livechat_Activator {
 
 	public static function activate() {
 		add_option( 'rocketchat-livechat-url' );
-	}
 
+	/**
+	 * Add transient upon activation, we want to display a notice during activation
+	 * so that the user can setup their
+	 */
+	    set_transient( 'rocketchat-admin-notice-livechat-url', 'no_url' );
+	}
 }

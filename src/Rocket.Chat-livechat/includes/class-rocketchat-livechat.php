@@ -69,7 +69,7 @@ class Rocketchat_Livechat {
 	public function __construct() {
 
 		$this->plugin_name = 'rocketchat-livechat';
-		$this->version = '1.0.2';
+		$this->version = '1.0.3';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -153,6 +153,7 @@ class Rocketchat_Livechat {
 
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'menu' );
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'register_settings' );
+		$this->loader->add_action( 'admin_notices', $plugin_admin, 'rocketchat_livechat_admin_notice_url_setup' );
 
 	}
 
