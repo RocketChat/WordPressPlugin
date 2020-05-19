@@ -1,18 +1,18 @@
 <?php
 /**
  *
- * @link              http://rocket.chat
- * @since             1.0.3
+ * @link              https://rocket.chat
+ * @since             1.0.0
  * @package           Rocketchat_Livechat
  *
  * @wordpress-plugin
  * Plugin Name:       Rocket.Chat LiveChat
  * Plugin URI:        http://rocket.chat
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.3
- * Author:            Marko Banušić
- * Author URI:        http://nezn.am
- * License:           GPL-2.0+
+ * Version:           1.0.4
+ * Author:            Rocket.Chat
+ * Author URI:        https://rocket.chat
+ * License:           GPL-3.0
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       rocketchat-livechat
  * Domain Path:       /languages
