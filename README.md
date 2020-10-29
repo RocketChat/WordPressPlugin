@@ -25,7 +25,7 @@ If you have a use case or functionality that you think a plugin should cover, su
 ```
 docker-compose up
 ```
-3. Open your broser in ```localhost:5000```.
+3. Open your browser in ```localhost:5000```.
 4. Install your wordpress.
 5. Go to ```localhost:5000/wp-admin/plugins.php``` and active Rocket.Chat LiveChat.
 6. Commit your changes (git commit -am 'Added some feature')
